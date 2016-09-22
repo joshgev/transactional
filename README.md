@@ -56,8 +56,8 @@ s = Set([0, 1, 2, 2])  # {0, 1, 2}
 # Now let's make some changes we might want to undo
 with Transaction as t:
   l.append(4) # [0, 1, 2, 3, 4]
-  d["a"] = 100 {"a": 100, "b": 1}
-  s.add(-1): {0, 1, 2, -1}
+  d["a"] = 100 # {"a": 100, "b": 1}
+  s.add(-1) # {0, 1, 2, -1}
 
 assert l == List(range(5))
 assert d == Dict((("a", 100), ("b", 1)))
