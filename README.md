@@ -54,7 +54,7 @@ d = Dict([("a", 0), ("b", 1)])  # {"a": 0, "b": 1}
 s = Set([0, 1, 2, 2])  # {0, 1, 2}
 
 # Now let's make some changes we might want to undo
-with Transaction as t:
+with Transaction() as t:
   l.append(4) # [0, 1, 2, 3, 4]
   d["a"] = 100 # {"a": 100, "b": 1}
   s.add(-1) # {0, 1, 2, -1}
@@ -89,7 +89,7 @@ c =  MyClass(1)
 assert c.x() == 1
 
 # Now let's change the value so we can undo it later
-with Transaction as t:
+with Transaction() as t:
   c.x(2)
   
 assert c.x() == 2
