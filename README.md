@@ -99,3 +99,9 @@ t.undo()
 
 assert c.x() == 1
 ```
+
+## Data structure API
+
+The API for Set, List, and Dict are similar to those of Python's set, list, and dict.  The code for the data structures 
+is simple enough that their API can be fully understood after a cursory glance.  Further, the test folder contains 
+more detailed use of each of these structures.
